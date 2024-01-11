@@ -1,0 +1,17 @@
+{
+	"name": "Compte des ventes",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    year(OrderDate) AS Annee,\n    Count(*) as NbVentes\nFROM dbo.orders\nGROUP BY Year(OrderDate)\nORDER BY NbVentes\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
